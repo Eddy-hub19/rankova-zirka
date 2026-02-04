@@ -20,7 +20,7 @@ gulp.task("scss", function() {
         .src("./source/styles/style.scss")
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(concat('style.css'))
-        .pipe(gulp.dest("./source/styles/scss"));
+        .pipe(gulp.dest("./source/styles"));
 });
 
 // compile file sass to css in folder > style
@@ -31,3 +31,8 @@ gulp.task("scss", function() {
 //         .pipe(concat('./style.css'))
 //         .pipe(gulp.dest("./source/styles/sass"));
 // });
+
+// watch task
+gulp.task("watch", function() {
+    gulp.watch("./source/styles/**/*.scss", gulp.series("scss"));
+});
