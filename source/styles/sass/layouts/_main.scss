@@ -172,28 +172,37 @@
         margin-bottom: 20px;
         .social__icon {
             margin-top: 45px;
+            transition: transform 0.3s ease;
+            
+            &:hover {
+                transform: scale(1.15);
+            }
+            
             .icon-instagram {
                 color: white;
                 fill: currentColor;
-                transition: color 2s cubic-bezier(0.165, 0.84, 0.44, 1);
-                :hover {
+                transition: color 0.3s ease;
+                
+                &:hover {
                     color: #e19a30;
                 }
             }
             .icon-youtube {
                 color: white;
                 fill: currentColor;
-                transition: color 2s cubic-bezier(0.165, 0.84, 0.44, 1);
-                :hover {
+                transition: color 0.3s ease;
+                
+                &:hover {
                     color: red;
                 }
             }
             .icon-facebook {
                 color: white;
                 fill: currentColor;
-                transition: color 2s cubic-bezier(0.165, 0.84, 0.44, 1);
-                :hover {
-                    color: blue;
+                transition: color 0.3s ease;
+                
+                &:hover {
+                    color: #6161d2;
                 }
             }
         }
@@ -206,6 +215,11 @@
             color: variables.$base;
             transform: rotate(90deg);
             margin-bottom: 40px;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: variables.$primary;
+            }
         }
     }
 }

@@ -17,10 +17,12 @@
         flex-direction: column;
         align-content: center;
         align-items: center;
-        padding: 18px;
+        padding: 12px 18px;
         margin-left: -120px;
         cursor: pointer;
         text-align: center;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease;
     }
     .scroll {
         position: relative;
@@ -43,4 +45,6 @@
 .translate-link:hover,
 .translate-link:focus {
     color: variables.$primary;
+    border-bottom-color: variables.$primary;
+    background: rgba(251, 215, 132, 0.1);
 }
