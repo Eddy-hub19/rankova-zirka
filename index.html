@@ -610,16 +610,16 @@
                 <h3 class="main__second-title">Наші реквізити:</h3>
                 <ul>
                   <li class="main-content__item">
-                    <p class="main__second-title" style="margin: 20px 0">👉 Для допомоги:</p>
+                    <p class="main__second-title donations-help-text">👉 Для допомоги:</p>
 
-                    <p class="main__second-title" style="display: flex; align-items: center">
-                      <a
-                        class="main__descr-link"
-                        target="_blank"
-                        href="https://next.privat24.ua/"
-                        style="display: flex; align-items: center"
-                      >
-                        <img src="https://img.icons8.com/office/48/null/bank-cards.png" style="margin-right: 10px" />
+                    <p class="main__second-title donations-flex">
+                      <a class="main__descr-link donations-link-flex" target="_blank" href="https://next.privat24.ua/">
+                        <img
+                          class="donations-icon"
+                          src="https://next.privat24.ua/assets/912a277127b20d16edea.svg"
+                          width="40px"
+                          height="40px"
+                        />
                         Приватбанку:
                         <a target="_blank" href="https://next.privat24.ua/" class="number-privat"
                           >5169 3305 2117 6245</a
@@ -628,9 +628,24 @@
                     </p>
                   </li>
                   <li class="main-content__item">
-                    <p class="main__second-title" style="display: flex; align-items: center; margin-right: 20px">
-                      <img style="margin-right: 10px" src="https://img.icons8.com/color/48/null/paypal.png" />
+                    <p class="main__second-title donations-flex donations-with-margin">
+                      <img
+                        class="donations-icon"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/PayPal_Logo_Icon_2014.svg/960px-PayPal_Logo_Icon_2014.svg.png"
+                        width="40px"
+                        height="40px"
+                      />
                       PayPal: <a href="mailto:andreyandreychyk@ukr.net">andreyandreychyk@ukr.net</a>
+                    </p>
+                  </li>
+                  <li class="main-content__item">
+                    <p class="main__second-title donations-flex">
+                      <img src="https://static.liqpay.ua/buttons/LiqPay-logo.svg" width="40px" height="40px" />
+                      <a
+                        href="https://www.liqpay.ua/api/3/checkout?data=eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiIxMDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0JTQvtCx0YDQvtCy0ZbQu9GM0L3RliDQv9C+0LbQtdGA0YLQstC4IiwicHVibGljX2tleSI6ImkzMjQxMzc5MTkwNCIsImxhbmd1YWdlIjoidWsiLCJyZXN1bHRfdXJsIjoiaHR0cHM6Ly9yYW5rb3ZhLXppcmthLmttLnVhLyJ9&signature=88veDE1oKghh7faqp+d0Lj1I6sQ="
+                        class="donations-m"
+                        >LiqPay</a
+                      >
                     </p>
                   </li>
                   <li class="main__second-title">
@@ -746,14 +761,14 @@
     <script>
       window.LiqPayCheckoutCallback = function () {
         LiqPayCheckout.init({
-          data: "eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiIxMDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0JTQvtCx0YDQvtCy0ZbQu9GM0L3RliDQv9C+0LbQtdGA0YLQstGD0LLQsNC90L3RjyIsInB1YmxpY19rZXkiOiJpMzI0MTM3OTE5MDQiLCJsYW5ndWFnZSI6InJ1In0=",
-          signature: "ror3gA8kLSCLYJl4tMI29/gmwQc=",
+          data: "eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiIxMDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0JTQvtCx0YDQvtCy0ZbQu9GM0L3RliDQv9C+0LbQtdGA0YLQstC4IiwicHVibGljX2tleSI6ImkzMjQxMzc5MTkwNCIsImxhbmd1YWdlIjoidWsiLCJyZXN1bHRfdXJsIjoiaHR0cHM6Ly9yYW5rb3ZhLXppcmthLmttLnVhLyJ9",
+          signature: "88veDE1oKghh7faqp+d0Lj1I6sQ=",
           embedTo: "#liqpay_checkout",
           mode: "embed", // embed || popup,
         })
           .on("liqpay.callback", function (data) {
-            // console.log(data.status)
-            // console.log(data)
+            console.log(data.status)
+            console.log(data)
           })
           .on("liqpay.ready", function (data) {
             // ready
@@ -763,9 +778,9 @@
           })
       }
     </script>
+    <script src="//static.liqpay.ua/libjs/checkout.js" async></script>
 
     <!-- Scripts  -->
-    <script src="//static.liqpay.ua/libjs/checkout.js" async></script>
 
     <script src="./source/js/btn-top.js"></script>
     <script src="./source/js/hamburger.js"></script>

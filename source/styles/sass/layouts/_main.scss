@@ -90,6 +90,8 @@
     justify-content: center;
     margin-top: 50px;
     .main-content__item {
+        display: flex;
+        flex-direction: column;
         margin-top: 30px;
         margin-bottom: 30px;
     }
@@ -173,16 +175,16 @@
         .social__icon {
             margin-top: 45px;
             transition: transform 0.3s ease;
-            
+
             &:hover {
                 transform: scale(1.15);
             }
-            
+
             .icon-instagram {
                 color: white;
                 fill: currentColor;
                 transition: color 0.3s ease;
-                
+
                 &:hover {
                     color: #e19a30;
                 }
@@ -191,7 +193,7 @@
                 color: white;
                 fill: currentColor;
                 transition: color 0.3s ease;
-                
+
                 &:hover {
                     color: red;
                 }
@@ -200,7 +202,7 @@
                 color: white;
                 fill: currentColor;
                 transition: color 0.3s ease;
-                
+
                 &:hover {
                     color: #6161d2;
                 }
@@ -216,7 +218,7 @@
             transform: rotate(90deg);
             margin-bottom: 40px;
             transition: color 0.3s ease;
-            
+
             &:hover {
                 color: variables.$primary;
             }
@@ -256,6 +258,39 @@
         color: rgba(184, 70, 70, 0.831);
         font-size: 26px;
     }
+}
+
+// Donations section styles
+.donations-help-text {
+    margin: 20px 0;
+}
+
+.donations-flex {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.donations-link-flex {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.donations-icon {
+    margin-right: 10px;
+}
+
+.number-privat {
+    margin-left: 4px;
+}
+
+.donations-flex a[href^="mailto:"] {
+    margin-left: 4px;
+}
+
+.donations-m {
+    margin-left: 10px;
 }
 
 // Служіння
